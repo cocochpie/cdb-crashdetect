@@ -76,8 +76,8 @@ def test(cmd):
 
 def sx( regular_expression, data ):
     ret = re.search(regular_expression, data)
-    if None != ret: ret = ret.group(1)
-    return ret.strip()
+    if None != ret: ret = ret.group(1).strip()
+    return ret
 
 def zzz(unik):
     charset = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789()[]'
