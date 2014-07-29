@@ -1,4 +1,4 @@
 cdb-crashdetect
 ===============
 
-Crashdetector for fuzzing with CDB(windbg console)
+CDB(windbg console) Crashdetector for fuzzing
