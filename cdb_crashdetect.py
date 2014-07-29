@@ -104,21 +104,14 @@ def parser(data):
         while '  ' in instruction: 
             instruction = instruction.replace('  ', ' ')
 
-        unik = '_'.join([browser, ev_class, ev_event, at, instruction])
-
-        unik = zzz(unik)
-
-        ##
-        #
-        #   You can capture crash information using those strings below in your wrapper launcher script
-        #
-        ##
         print '[METAINFO_BEGIN]'
         print data
         print '[METAINFO_END]'
-        print '[CAPTURE_BEGIN]'
-        print unik
-        print '[CAPTURE_END]'
+        print 'CLASS = ', ev_class
+        print 'TITLE = ', ev_title
+        print 'EVENT = ', ev_event
+        print 'INSTRUCTION = ', instruction
+        print 'AT = ', at
 
         return True
 
@@ -133,20 +126,18 @@ def wait_for_process_die(die):
 
 ##############################################################
 
-if len(sys.argv) != 4:
+if len(sys.argv) != 3:
     ##
     #
     #   0 : self
-    #   1 : browser (only used for display information)
-    #   2 : target application
-    #   3 : url
+    #   1 : target application
+    #   2 : url
     #
-    print 'Invalid arguments %s != 4' % len(sys.argv)
+    print 'Invalid arguments %s != 3' % len(sys.argv)
     quit()
 
-browser = sys.argv[1]
-cmd = sys.argv[2]
-url = sys.argv[3]
+cmd = sys.argv[1]
+url = sys.argv[2]
 
 die = cmd[ cmd.rfind('\\') + 1 : cmd.rfind('.exe') + 4 ]
 
