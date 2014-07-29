@@ -27,7 +27,7 @@ CDB_PATH = 'cdb.exe -y "%s" -G -o -cfr script.txt' % sympath
 #################################
 
 timer = None
-crash_report_cmd = '!exploitable;.lastevent;r;u .;k;qd'
+crash_report_cmd = '!exploitable;.lastevent;r;u .;k;q'
 events = ['asrt', 'av', 'dm', 'dz', 'c000008e', 'gp', 'ii', 'iov', 'ip', 'isc', 'lsq', 'sbo', 'sov', 'chhc', 'ssessec', 'bpebpec', '80000003']
 
 hoho = []
