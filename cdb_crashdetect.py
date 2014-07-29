@@ -43,7 +43,6 @@ sxi ibp
 sxn wos
 sxn wob
 sx- -c "q" 3c
-sx- -c "q" *
 .pcmd -s "gn"
 g
 ''' % (os.getcwd(), ''.join(hoho))
