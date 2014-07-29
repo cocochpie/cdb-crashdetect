@@ -137,11 +137,11 @@ if len(sys.argv) != 3:
     quit()
 
 cmd = sys.argv[1]
-url = sys.argv[2]
+arguments = sys.argv[2]
 
 die = cmd[ cmd.rfind('\\') + 1 : cmd.rfind('.exe') + 4 ]
 
-test(CDB_PATH + ' ' + cmd + ' ' + url)
+test(CDB_PATH + ' ' + cmd + ' ' + arguments)
 wait_for_process_die(die)
 if parser(open('cdb_log.txt', 'rb').read()) == True:
     os.system('tskill werfault')
