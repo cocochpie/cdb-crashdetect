@@ -88,8 +88,6 @@ def zzz(unik):
 
 
 def parser(data):
-    global browser
-
     if 'Exploitability Classification:' not in data: return False
 
     data = data[ data.find('Exploitability Classification') : ]
